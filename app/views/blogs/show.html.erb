@@ -8,7 +8,6 @@
     <i class="fa fa-instagram"></i>
   </div>
 </header>
-
 <nav>
   <ul class="nav-list">
     <li class="nav-list-item">
@@ -18,7 +17,6 @@
     <li class="nav-list-item">Topic</li>
   </ul>
 </nav>
-
 <div class="main-visual">
   <div class="main-visual-content">
     <p class="main-visual-text">
@@ -37,23 +35,29 @@
     <h2 class="blog-heading">Blog</h2>
     <section class="blog-box">
       <h3 class="blog-box-heading">
+        <!-- title部分 下で変更します -->
         <%= @blog.title %>
+        <!-- title部分 ここまで -->
       </h3>
       <div class="blog-box-content">
         <p class="category">
+          <!-- category部分 下で変更します -->
           <%= @blog.category %>
+          <!-- category部分 ここまで -->
         </p>
         <p class="blog-date">
+          <!-- created_at部分 下で変更します -->
           <%= @blog.created_at %>
+          <!-- created_at部分 ここまで -->
         </p>
       </div>
       <%= image_tag "img/forest.jpg", class:"single-image" %>
       <p class="single-text">
         <%= @blog.body %>
       </p>
-      <%= link_to "編集",edit_blog_path(@blog) %>
-      <a href="#">削除</a>
-      <div class="author-case">
+      <%= link_to "編集", edit_blog_path(@blog) %>
+      <%= link_to "削除", blog_path(@blog), method: :delete %>
+      <div class="author-case clearfix">
         <div class="author-image"></div>
         <div class="author-box">
           <p class="author-name">By JOHN SMITH / Photographer</p>
@@ -82,7 +86,7 @@
     </section>
     <section class="instagram">
       <h2 class="instagram-heading common-heading">Instagram</h2>
-      <div class="sidebar-contents">
+      <div class="sidebar-contents clearfix">
         <div class="instagram-box"></div>
         <div class="instagram-box"></div>
         <div class="instagram-box"></div>
